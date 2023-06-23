@@ -1,17 +1,20 @@
-import { useEffect, useState } from "react";
-import axios from "axios";
-import SpeechRecognition, { ListeningOptions, useSpeechRecognition } from 'react-speech-recognition';
-import { Result } from "./types";
 import "./App.css"
+
+import { useEffect, useState } from "react";
+import { Result } from "./types";
+import axios from "axios";
+
+//used for speech recognition
+import SpeechRecognition, { ListeningOptions, useSpeechRecognition } from 'react-speech-recognition';
+
+//used for speech synthesis
 const Artyom = require('artyom.js').default;
+const artyom = new Artyom();
 
 const API_URL = process.env.REACT_APP_API_URL;
 
-const artyom = new Artyom();
-
 const options: ListeningOptions = {
-  continuous: true,
-  interimResults: true
+  continuous: true
 }
 
 function App() {

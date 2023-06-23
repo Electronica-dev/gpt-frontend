@@ -1,3 +1,4 @@
+//data object which we get from the backend
 export interface Result {
   result: {
     index: number,
