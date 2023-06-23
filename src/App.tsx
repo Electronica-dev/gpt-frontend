@@ -6,8 +6,6 @@ import "./App.css"
 const Artyom = require('artyom.js').default;
 
 const API_URL = process.env.REACT_APP_API_URL;
-console.log(API_URL);
-
 
 const artyom = new Artyom();
 
